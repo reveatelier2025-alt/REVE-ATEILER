@@ -56,17 +56,16 @@
       top: 38px;
       left: 6%;
       right: 6%;
-      z-index: 5;
+      z-index: 10;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-family: Arial, sans-serif;
-      letter-spacing: 14px;
-      font-size: 20px;
-      font-weight: 600;
+    .logo img {
+      height: 22px;
+      width: auto;
+      display: block;
     }
 
     nav a {
@@ -79,7 +78,7 @@
     .content {
       position: absolute;
       left: 6%;
-      top: 45%;
+      top: 50%;
       transform: translateY(-50%);
       z-index: 5;
     }
@@ -89,13 +88,13 @@
       font-size: clamp(48px, 7vw, 110px);
       letter-spacing: 22px;
       font-weight: 500;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
     .content p {
       font-family: Arial, sans-serif;
       letter-spacing: 10px;
-      font-size: 18px;
+      font-size: 16px;
       text-transform: uppercase;
     }
 
@@ -131,15 +130,21 @@
     @media (max-width: 768px) {
       header {
         top: 24px;
+        left: 7%;
+        right: 7%;
       }
 
-      nav {
-        display: none;
+      .logo img {
+        height: 18px;
       }
 
-      .logo {
-        font-size: 16px;
-        letter-spacing: 8px;
+      nav a {
+        margin-left: 16px;
+        font-size: 14px;
+      }
+
+      .content {
+        left: 7%;
       }
 
       .content h1 {
@@ -149,7 +154,12 @@
 
       .content p {
         letter-spacing: 5px;
-        font-size: 14px;
+        font-size: 13px;
+      }
+
+      .date {
+        left: 7%;
+        font-size: 15px;
       }
     }
   </style>
@@ -160,7 +170,10 @@
 <section class="hero">
 
   <header>
-    <div class="logo">REVE</div>
+    <div class="logo">
+      <img src="logo.png" alt="REVE Atelier Logo">
+    </div>
+
     <nav>
       <a href="#">Courses</a>
       <a href="#">Works</a>
@@ -170,7 +183,7 @@
   </header>
 
   <div class="slide active">
-    <img src="images/P4114103.jpg" alt="REVE Atelier">
+    <img src="images/reve01.png" alt="REVE Atelier">
     <div class="content">
       <h1>REVE ATELIER</h1>
       <p>Painting as a quiet practice</p>
@@ -179,7 +192,7 @@
   </div>
 
   <div class="slide">
-    <img src="images/IMG_7059-03.png" alt="Painting Class">
+    <img src="images/reve02.jpg" alt="Painting Class">
     <div class="content">
       <h1>ART CLASS</h1>
       <p>A moment to slow down</p>
@@ -188,7 +201,7 @@
   </div>
 
   <div class="slide">
-    <img src="images/IMG_7059-02.png" alt="Student Works">
+    <img src="images/reve03.jpg" alt="Student Works">
     <div class="content">
       <h1>WORKSHOP</h1>
       <p>Texture · Acrylic · Alcohol Ink</p>
@@ -196,10 +209,20 @@
     <div class="date">Book via LINE</div>
   </div>
 
+  <div class="slide">
+    <img src="images/reve04.png" alt="Creative Moment">
+    <div class="content">
+      <h1>CREATE</h1>
+      <p>Find your own rhythm</p>
+    </div>
+    <div class="date">REVE Atelier｜Banqiao</div>
+  </div>
+
   <div class="dots">
     <div class="dot active" onclick="goToSlide(0)"></div>
     <div class="dot" onclick="goToSlide(1)"></div>
     <div class="dot" onclick="goToSlide(2)"></div>
+    <div class="dot" onclick="goToSlide(3)"></div>
   </div>
 
 </section>
@@ -227,7 +250,7 @@
     showSlide(index);
   }
 
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 6500);
 </script>
 
 </body>
